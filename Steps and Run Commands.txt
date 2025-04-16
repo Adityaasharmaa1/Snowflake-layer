@@ -1,0 +1,11 @@
+install Docker desktop 
+create a dockerfile in some folder add dockerfile contents from dockerfile attached in repo
+
+open command/terminal from inside that folder where dockerfile is present or cd to that location
+
+and run below commands one by ne
+
+docker build -t snowflake-layer .
+docker create --name layer-builder snowflake-layer
+docker cp layer-builder:/opt/snowflake-layer.zip .
+docker rm layer-builder
